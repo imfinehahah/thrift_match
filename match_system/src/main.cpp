@@ -54,7 +54,8 @@ class Pool { // 匹配池
             try {
                 transport->open();
                 //调用接口，把信息存储 "数据存储服务器" 中
-                int res = client.save_data("acs_3082", "4742e5bc", a, b);
+                //第一个参数使用自己的用户名，第二个参数使用密码md5前八位
+                int res = client.save_data("imfinehahah", "4742e5bc", a, b);
                 //输出匹配结果
                 if (!res) puts("success");
                 else puts("fail");

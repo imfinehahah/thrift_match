@@ -25,7 +25,7 @@ from sys import stdin
  # 然后重写 main 函数，使之能不断从终端读入信息
 def operate(op, user_id, user_name, score):
     # ...........................
-    transport = TSocket.TSocket('127.0.0.1', 9090) # 客户端需要修改成服务端所在的IP地址
+    transport = TSocket.TSocket('localhost', 9090) # 客户端需要修改成服务端所在的IP地址
 
     # Buffering is critical. Raw sockets are very slow
     # 增加缓存区，提高socket速度
