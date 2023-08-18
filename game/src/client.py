@@ -20,9 +20,7 @@ from thrift.protocol import TBinaryProtocol
 
 from sys import stdin
 
- # 将原来的通信 main 函数改写成operate函数，每次需要的时候调用一次建立通信传递信息
- # 目的是可以一直不断处理信息
- # 然后重写 main 函数，使之能不断从终端读入信息
+# 从终端不断读入信息
 def operate(op, user_id, user_name, score):
     # ...........................
     transport = TSocket.TSocket('localhost', 9090) # 客户端需要修改成服务端所在的IP地址
